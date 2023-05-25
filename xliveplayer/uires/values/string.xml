@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+  <string>
+    <title value="XLivePlayer"/>
+    <ver value="1.0"/>
+    <about value="About"/>
+    <add_favor value="Add Room"/>
+    <settings value="Settings"/>
+  </string>

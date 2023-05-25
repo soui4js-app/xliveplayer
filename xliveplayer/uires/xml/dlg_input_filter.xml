@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SOUI name="add_favor" title="@string/add_favor" bigIcon="ICON_LOGO:32" smallIcon="ICON_LOGO:16" margin="5,5,5,5"  resizable="1" wndType="normal"
+translucent="1"
+trCtx="dlg_input_filter"
+>
+  <root skin="_skin.sys.wnd.bkgnd" cache="1"  width="300" height="110">
+    <caption pos="0,0,-0,30" show="1" font="adding:0">
+      <icon pos="10,8" src="ICON_LOGO:16"/>
+      <text pos="29,9">input filter param</text>
+      <imgbtn id="IDCANCEL" skin="_skin.sys.btn.close"    pos="-45,0" tip="close" animate="1"/>
+    </caption>
+    <window pos="5,[2,-5,-5" layout="vbox" padding="5,5,5,10" interval="5">
+		<window size="-2,0" weight="1" layout="hbox" Interval="5">
+			<text text="filter param:"/>
+			<edit name="edit_input" size="0,-2" weight="1" margin="2,2"/>
+		</window>
+		<window size="-2,-1" layout="hbox"  gravity="center" interval="20">
+			<window size="0,0" weight="1"/>
+			<button id="IDOK" text="OK" size="80,30"/>
+			<button id="IDCANCEL" text="Cancel" size="80,30"/>
+			<window size="0,0" weight="1"/>
+		</window>
+	</window>
+  </root>
+</SOUI>

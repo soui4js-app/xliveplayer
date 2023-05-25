@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language name="English" guid="{0DAEDE3C-6B94-4a81-9A55-C304FDD69D99}" font="face:'Bradley Hand ITC',size:16,charset:0,weight:400,bold:0,italic:0,strike:0,underline:0">
+  <context>
+    <!--没有上下文的翻译及字符串表的翻译-->
+  </context>
+  <context name="editmenu">
+    <message>
+      <source>copy</source>
+      <translation>copy</translation>
+    </message>
+    <message>
+      <source>cut</source>
+      <translation>cut</translation>
+    </message>
+    <message>
+      <source>paste</source>
+      <translation>paste</translation>
+    </message>
+  </context>
+  <context name="messagebox">
+    <message>
+      <source>ok</source>
+      <translation>ok</translation>
+    </message>
+    <message>
+      <source>cancel</source>
+      <translation>cancel</translation>
+    </message>
+    <message>
+      <source>retry</source>
+      <translation>retry</translation>
+    </message>
+  </context>
+  <context name="dlg_main">
+    
+  </context>
+ 
+</language>

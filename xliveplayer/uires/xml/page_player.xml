@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<window size="-2,-2">
+	<window pos="0,0,-0,-0" id="100" videoCanvas="1"/>
+	<window pos="0,0,-0,-0" name="wnd_curtain">
+		<!--幕维 -->
+		<img name="curtain_left" skin="skin_curtain_left" pos="0,0,|0,-0"/>
+		<img name="curtain_right" skin="skin_curtain_right" pos="|0,0,-0,-0"/>
+	</window>
+	<window pos="0,0" size="-2,-2" name="sdl_back" layout="vbox">
+		<!--URL输入界面 -->
+		<window size="0,0" weight="1"/>
+		<window size="-2,30" layout="hbox" gravity="center" alpha="200" skin="skin_url_bk" padding="10,5,0,5">
+			<text text="url:" colorText="@color/white"/>
+			<edit size="0,-2" weight="1" name="edit_url" cueText="input video url" margin="1,1,1,1" colorBkgnd="@color/white"/>
+			<imgbtn size="30,30" name="btn_play" tip="play file or url" skin="skin_btn_play"/>
+		</window>
+		<window size="0,0" weight="1"/>
+	</window>
+	<window pos="0,0" size="-2,-2" layout="vbox" visible="0" name="sdl_front">
+		<window size="0,0" weight="1" visible="0"/>
+		<window size="-2,60" name="pane_ctrl" layout="vbox" gravity="center" colorBkgnd="@color/gray" alpha="200">
+			<window size="-2,-1" layout="hbox" interval="5">
+				<!--进度条-->
+				<sliderbar size="0,-2" weight="1" name="slider_prog" min="0" max="100" value="0"/>
+				<text name="txt_duration" colorText="@color/white"/>
+			</window>
+			<window size="-2,0" weight="1" layout="hbox" interval="5" gravity="center">
+				<window size="0,0" weight="1"/>
+				<imgbtn size="30,30" name="btn_stop" tip="stop" skin="skin_btn_stop"/>
+				<window size="-1,-1">
+					<imgbtn pos="0,0,@30,@30" name="btn_pause" skin="skin_btn_pause" tip="pause"/>
+					<imgbtn pos="0,0,@30,@30" name="btn_resume" skin="skin_btn_play" visible="false" tip="resume"/>
+				</window>
+				<window size="30,30">
+					<imgbtn pos="0,0,-0,-0" name="btn_record_start" tip="Record" skin="skin_btn_record"/>
+					<window pos="0,0,-0,-0" name="btn_record_stop"  visible="0" tip="stop record">
+						<img pos="|0,|0,@24,@24" offset="-0.5,-0.5" name="indicator_recording" skin="skin_recording"/>
+					</window>
+				</window>
+				<text text="Volume:"/>
+				<sliderbar size="100,-2" name="slider_volume" min="0" max="100" value="80"/>
+				<imgbtn size="30,30" name="btn_setFilter" tip="Set Filter" skin="skin_btn_filter"/>
+				<window size="0,0" weight="1"/>
+			</window>
+		</window>
+	</window>
+	<window pos="0,0,@-1,-0" name="wnd_room_list" layout="hbox">
+		<!--房间列表-->
+		<window name="wnd_roomlist_container" size="200,-2" layout="vbox" clipClient="1" skin="skin_girl" trackMouseEvent="1">
+			<window size="-2,30" layout="hbox" gravity="center" colorBkgnd="@color/white" interval="5">
+				<text text="Room List:"/>
+				<window size="0,0" weight="1"/>
+				<imgbtn size="-1,-1" name="btn_add_room" skin="btn_add_room" tip="add room"/>
+				<imgbtn size="-1,-1" name="btn_reflesh_room" skin="btn_refresh" tip="refresh room state"/>
+			</window>
+			<window size="-2,0" weight="1" layout="hbox">
+				<treeview name="room_tv" size="0,-2" weight="1" margin="1,1" colorBorder="@color/black" hasLines="true" indent="20">
+					<template height="30" layout="hbox"  skin="skin_item_bk" trackMouseEvent="1" gravity="center" interval="5"  font="face:宋体,size:16">
+						<img name="img_state" skin="skin_tree_icon" iconIndex="0"/>
+						<text name="txt_label" colorText="@color/black"/>
+						<animateimg name="ani_hot" skin="skin_hot" display="0" visible="0"/>
+						<button  size="50,28" name="btn_go_offcial_url" display="0" visible="0" text="www" tip="open platform website"/>
+					</template>
+				</treeview>
+				<progress size="15,-2" name="prog_check_room" min="0" max="100" value="50" vertical="1" display="0" visible="0"/>
+			</window>
+		</window>
+		<window size="-1,-1" skin="skin_room_bookmark"  name="wnd_room_bookmark" padding="5,30,5,26">
+			<vtext size="-1,-1" text="Room List" colorText="@color/white" font="escapement:-90"/>
+		</window>
+	</window>
+</window>

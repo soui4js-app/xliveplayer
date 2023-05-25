@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language name="中文" guid="{0DAEDE3C-6B94-4a81-9A55-C304FDD69D98}" font="face:隶书,size:20,charset:134">
+  <context>
+    <!--没有上下文的翻译及字符串表的翻译-->
+    <message>
+      <source>XLivePlayer</source>
+      <translation>聚播</translation>
+    </message>
+    <message>
+      <source>About</source>
+      <translation>关于</translation>
+    </message>
+        <message>
+      <source>Add Room</source>
+      <translation>增加自定义房间</translation>
+    </message>
+    <message>
+      <source>Settings</source>
+      <translation>设置</translation>
+    </message>
+    <message>
+      <source>close</source>
+      <translation>关闭窗口</translation>
+    </message>    
+  </context>
+  <context name="editmenu">
+    <message>
+      <source>copy</source>
+      <translation>复制</translation>
+    </message>
+    <message>
+      <source>cut</source>
+      <translation>剪切</translation>
+    </message>
+    <message>
+      <source>paste</source>
+      <translation>粘贴</translation>
+    </message>
+    <message>
+      <source>delete</source>
+      <translation>删除</translation>
+    </message>
+    <message>
+      <source>select all</source>
+      <translation>全选</translation>
+    </message>
+  </context>
+  <context name="messagebox">
+    <message>
+      <source>ok</source>
+      <translation>确定</translation>
+    </message>
+    <message>
+      <source>cancel</source>
+      <translation>取消</translation>
+    </message>
+    <message>
+      <source>retry</source>
+      <translation>重试</translation>
+    </message>
+  </context>
+  <context name="dlg_main">
+    <message>
+      <source>input video url</source>
+      <translation>输入视频url</translation>
+    </message>
+    <message>
+      <source>play file or url</source>
+      <translation>播放视频文件或者URL</translation>
+    </message>
+    <message>
+      <source>Set Filter</source>
+      <translation>设置滤镜</translation>
+    </message>
+    <message>
+      <source>Record</source>
+      <translation>录制视频</translation>
+    </message>
+    <message>
+      <source>Stop</source>
+      <translation>停止</translation>
+    </message>
+    <message>
+      <source>Volume:</source>
+      <translation>音量:</translation>
+    </message>
+    <message>
+      <source>Room List:</source>
+      <translation>房间列表:</translation>
+    </message>
+    <message>
+      <source>Room List</source>
+      <translation>房间列表</translation>
+    </message>
+    <message>
+   	<source>www</source>
+      <translation>官网</translation>
+    </message>
+    <message>
+   	<source>open platform website</source>
+       <translation>打开平台官网</translation>
+    </message>   
+    <message>
+   	<source>add room</source>
+       <translation>增加自定义房间</translation>
+    </message> 
+     <message>
+   	<source>refresh room state</source>
+       <translation>刷新房间状态</translation>
+    </message>   
+      <message>
+   	<source>stop</source>
+       <translation>停止</translation>
+    </message>   
+         <message>
+   	<source>pause</source>
+       <translation>暂停</translation>
+    </message>   
+         <message>
+   	<source>resume</source>
+       <translation>继续</translation>
+    </message>      
+  </context>
+  <context name="dlg_settings">
+     <message>
+     	<source>Choose Language</source>
+     	<translation>选择语言</translation>
+     </message>
+     <message>
+     	<source>Chinese</source>
+     	<translation>中文</translation>
+     </message>
+     <message>
+     	<source>English</source>
+     	<translation>英文</translation>
+     </message>
+     <message>
+     	<source>Folder for recording:</source>
+     	<translation>视频保存位置:</translation>
+     </message>
+     <message>
+     	<source>enable vodplayer log</source>
+     	<translation>开启播放器LOG</translation>
+     </message>
+     
+  </context>
+  <context name="dlg_add_favor">
+  	<message>
+  	  <source>live platform:</source>
+  	  <translation>直播平台:</translation>
+  	</message>
+   	<message>
+  	  <source>room id:</source>
+  	  <translation>房间ID:</translation>
+  	</message> 	
+   	<message>
+  	  <source>room name:</source>
+  	  <translation>房间名称:</translation>
+  	</message> 	
+  </context>
+  <context name="dlg_input_filter">
+  	<message>
+  	  <source>input filter param</source>
+  	  <translation>输入视频滤镜参数</translation>
+  	</message>
+   	<message>
+  	  <source>filter param:</source>
+  	  <translation>滤镜参数:</translation>
+  	</message> 	
+  </context>
+</language>

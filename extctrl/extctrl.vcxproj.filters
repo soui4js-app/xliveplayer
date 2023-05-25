@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6fa52905-4a06-4bb0-ae60-7109803a1975}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{bb5b639d-cd00-4403-b99e-f5642216f99a}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{7352dbda-8376-4589-b849-afcd4c164abb}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;manifest</Extensions>
+    </Filter>
+    <Filter Include="SoUI Resource">
+      <UniqueIdentifier>{67c0f21b-2532-4580-8915-8865c99a74c9}</UniqueIdentifier>
+      <Extensions>idx;xml;png;gif;jpg;ico;lua;bmp</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="extctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\SRatingBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\SProgressRing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\SAniWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\SByteArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\SChatEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\SCheckBox2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\SGroupList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\SHexEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\SRoundWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\SScrollText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\propgrid\colorpicker\ColourPopup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\propgrid\colorpicker\SColorPicker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\propgrid\propitem\SPropertyItem-Color.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\propgrid\propitem\SPropertyItem-Group.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\propgrid\propitem\SPropertyItem-Option.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\propgrid\propitem\SPropertyItem-Rect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\propgrid\propitem\SPropertyItem-Size.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\propgrid\propitem\SPropertyItem-Text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\propgrid\SPropertyGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\propgrid\SPropertyItemBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\SScrollSubtitles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\SVText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\SIECtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exctrls\SDocHostUIHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\SRatingBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\SProgressRing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\SAniWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\SByteArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\SChatEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\SCheckBox2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\SGroupList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\SHexEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\SRoundWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\SScrollText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\propgrid\colorpicker\ColourPopup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\propgrid\colorpicker\SColorPicker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\propgrid\colorpicker\Tooltipctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\propgrid\propitem\SPropertyItem-Color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\propgrid\propitem\SPropertyItem-Group.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\propgrid\propitem\SPropertyItem-Option.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\propgrid\propitem\SPropertyItem-Rect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\propgrid\propitem\SPropertyItem-Size.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\propgrid\propitem\SPropertyItem-Text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\propgrid\SPropertyEmbedWndHelper.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\propgrid\SPropertyGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\propgrid\SPropertyItemBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\propgrid\SPropertyItem-i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\SScrollSubtitles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exp_ctrls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\SVText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\SIECtrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exctrls\SDocHostUIHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="extctrl.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

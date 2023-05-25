@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SOUI name="about" title="@string/about" bigIcon="ICON_LOGO:32" smallIcon="ICON_LOGO:16" margin="5,5,5,5"  resizable="1" wndType="normal"
+translucent="1"
+>
+  <script src="js\aboutdlg.js"/>
+  <root skin="_skin.sys.wnd.bkgnd"   width="500" height="-1" on_init="onInit" on_exit="onExit">
+    <caption pos="0,0,-0,30" layout="hbox" gravity="center" interval="5">
+	<img id="sysid_icon" skin="skin_logo"/>
+      <text size="0,-1" weight="1">@string/about</text>
+      <imgbtn id="IDCANCEL" skin="_skin.sys.btn.close"  tip="close" animate="1"/>
+    </caption>
+    <window pos="5,[2,-5,-5" layout="vbox" interval="10" gravity="left" size="-2,-1" padding="10,20,10,10">
+        <text layout_gravity="center" font="style:StrokeAndFill,blurStyle:solid,blurRadius:3,size:30">Welcome to XlivePlayer！</text>
+        <text multiLines="1" size="-2,-1">本产品基于SOUI4JS开发，使用了vodplayer.dll作为流媒体的播放器。本产品主要目的在于演示soui4js的用途。\nsoui4是开源的客户端解决方案，soui4js是在soui4的基础上使用quickjs将soui4的核心模块导出到js的版本，方便在js中调用soui4接口。\n视频渲染使用了SDL 2.15, 视频及UI元素使用了soui4最新的设计，以达到最优的视频渲染效果，及最佳的性能。
+        </text>
+        <window layout="hbox">
+       	 <text>版权所有：启程软件</text>
+       	 <link href="mailto:setoutsoft@qq.com">setoutsoft@qq.com</link>
+        </window>
+        <window size="-2,-1" layout="gridlayout" interval="5" columnCount="2" gravity="fill">
+          <text >soui4js：</text>
+          <edit size="0,-1" columnWeight="1" readOnly="1" margin="1" colorBorder="@color/red" ncSkin="">https://github.com/soui4/soui4js</edit>
+          <text>soui4：</text>
+          <edit size="0,-1" readOnly="1" margin="1" colorBorder="@color/red" ncSkin="">https://github.com/soui4/soui4</edit>
+          <text >url api：</text>
+          <edit size="0,-1" readOnly="1" margin="1" colorBorder="@color/red" ncSkin="">http://api.pyduck.com/live-api/get-url</edit>
+        </window>
+    </window>
+  </root>
+</SOUI>

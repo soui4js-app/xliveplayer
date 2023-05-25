@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<window size="-2,-2" layout="vbox" interval="5">
+	<window size="-2,-1" layout="hbox" gravity="center" interval="5">
+		<!--toolbar-->
+		<text text="url:"/>
+		<edit size="0,30" weight="1" margin="2" name="edit_browser_url" text="http://172.29.76.139/"/>
+		<button size="80,30" name="btn_browser_url" text="go"/>
+		<button size="80,30" name="btn_browser_refresh" text="Refresh"/>
+		<button size="80,30" name="btn_browser_back" text="Back"/>
+	</window>
+	<iectrl size="-2,0" weight="1" name="ie_view"/>
+</window>

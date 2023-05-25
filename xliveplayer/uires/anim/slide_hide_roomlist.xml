@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set interpolator="linear" shareInterpolator="true" name="ani_hide" fillAfter="true" fillEnable="true">
+  <translate duration="200" fromXDelta="0" toXDelta="-200" fromYDelta="0" toYDelta="0"/>
+</set>

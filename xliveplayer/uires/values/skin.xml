@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<skin>
+  <gradation name="skin_active" colorFrom="rgb(15,17,20)" colorTo="rgb(153,180,209)" vertical="false"/>
+  <gradation name="skin_inactive" colorFrom="rgb(191,205,219)" colorTo="rgb(191,205,219)" vertical="false"/>
+  <imglist name="skin_curtain_left" src="img:png_left" filterLevel="high"/>
+  <imglist name="skin_curtain_right" src="img:png_right" filterLevel="high"/>
+  
+    <imglist name="btn_refresh" src="img:btn_refresh" states="3"/>
+    <imglist name="btn_add_room" src="img:btn_add_room" states="3"/>
+  <imglist name="skin_girl"	src="img:png_girl" alpha="240" filterLevel="high"/>
+    <imglist name="skin_tree_icon" src="img:png_treeicon" states="5" />
+    <imgframe name="skin_room_bookmark" src="img:png_room_bookmark"  margin="0,26,0,26"/>
+	<imgframe name="skin_item_bk" src="img:png_item_bk" states="3" margin="2,2,2,2"/>
+  <imglist name="skin_hot" src="img:png_hot"  states="6"/>
+	<imglist name="skin_logo" scale="100" src="img:png_logo_100" />
+	<imglist name="skin_logo" scale="200" src="img:png_logo_200" />
+	<shape name="skin_recording" shape="oval">
+		<solid color="@color/red"/>
+	</shape>
+	<colorrect name="skin_url_bk" cornerPercent="0.5" normal="@color/red"/>
+	<imglist name="skin_btn_config" src="img:png_btn_config" states="3"/>
+	<imglist name="skin_btn_pause" src="img:png_btn_pause" states="4"/>
+	<imglist name="skin_btn_play" src="img:png_btn_play" states="4"/>
+	<imglist name="skin_btn_record" src="img:png_btn_record" states="3"/>
+	<imglist name="skin_btn_about" src="img:png_btn_about" states="4"/>
+	<imglist name="skin_btn_stop" src="img:png_btn_stop" states="4"/>
+	<imglist name="skin_btn_filter" src="img:png_btn_filter" states="4"/>
+	
+	<imgframe name="skin_slider_back" src="img:png_slider_back" margin="10,0,10,0" tile="1"/>
+	<imgframe name="skin_slider_fore" src="img:png_slider_fore" margin="10,0,10,0" tile="1"/>
+	
+</skin>
