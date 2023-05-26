@@ -440,7 +440,7 @@ class RoomTvAdapter extends soui4.STvAdapter{
 	}
 
 	loadRoomList(){
-		this.httpReq = new soui4.HttpRequest("https://soime.cn/soui_player/roomlist.xml","get");
+		this.httpReq = new soui4.HttpRequest("https://soui4js.com/xliveplayer/roomlist.xml","get");
 		this.httpReq.cbHandler=this;
 		this.httpReq.onResp=this.onRoomListResp;
 		this.httpReq.onError=this.onRoomListError;
