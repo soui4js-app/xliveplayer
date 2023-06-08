@@ -14,9 +14,8 @@ class FilterInputDialog extends soui4.JsHostDialog{
 		{
 			//get input data.
 			let edit_input = this.FindIChildByName("edit_input");
-			let str = new soui4.SStringA();
-			edit_input.GetWindowText(str,false);
-			this.inputStr=str.c_str();
+			let str = edit_input.GetWindowText(false);			
+			this.inputStr=str;
 			this.onEvt = 0;
 		}
 		return false;
@@ -99,15 +98,11 @@ class AddRoomDialog extends soui4.JsHostDialog{
 		{
 			//get input data.
 			let cbx_platform = this.FindIChildByName("cbx_platform");
-			let str = new soui4.SStringA();
-			cbx_platform.GetWindowText(str,false);
-			this.platform = str.c_str();
+			this.platform =cbx_platform.GetWindowText(false);			
 			let edit_roomid = this.FindIChildByName("edit_room_id");
-			edit_roomid.GetWindowText(str,false);
-			this.room_id=str.c_str();
+			this.room_id = edit_roomid.GetWindowText(false);
 			let edit_roomdesc = this.FindIChildByName("edit_room_desc");
-			edit_roomdesc.GetWindowText(str,false);
-			this.room_desc=str.c_str();
+			this.room_desc = edit_roomdesc.GetWindowText(false);
 			soui4.log("add room, platform="+this.platform+" room_id="+this.room_id+" room_desc="+this.room_desc);
 			this.onEvt = 0;
 		}
@@ -254,7 +249,8 @@ class RoomTvAdapter extends soui4.STvAdapter{
 		let parentItem = this.GetParentItem(hItem);
 		let iRoom = this.GetItemData(hItem);
 		let roomInfo = this.getRoomInfo(iRoom);
-		if(roomInfo.id >= 0){//rooInfo.id<0 is group or platform
+		console.log("onItemRClick,id="+roomInfo.id, typeof(roomInfo.id));
+		if(typeof(roomInfo.id) === "string" || roomInfo.id >= 0){//rooInfo.id<0 is group or platform
 			let e2 = soui4.toEventItemPanelRclick(e);
 			let x = e2.lParam & 0xffff;
 			let y = (e2.lParam>>16) & 0xffff;
@@ -1033,10 +1029,8 @@ class CMainDlg extends soui4.JsHostDialog {
 	}
 	onBtnPlay(e){
 		let edit_url = this.FindIChildByName("edit_url");
-		let str_url = new soui4.SStringA();
-		edit_url.GetWindowText(str_url,false);
-		let url = str_url.c_str();
-		if(str_url.IsEmpty()){
+		let url = edit_url.GetWindowText(false);
+		if(url==""){
 			let filedlg = new soui4.SFileOpenDlg();
 			filedlg.isSave=false;
 			filedlg.defExt="mp4";
@@ -1081,10 +1075,9 @@ class CMainDlg extends soui4.JsHostDialog {
 		let wnd = this.FindIChildByName("ie_view");
 		let iectrl = extctrl.QiIIECtrl(wnd);
 		let edit = this.FindIChildByName("edit_browser_url");
-		let url = new soui4.SStringA();
-		edit.GetWindowText(url,true);
-		soui4.log("nav to "+url.c_str());
-		iectrl.Navigate(url.c_str());
+		let url = edit.GetWindowText(true);
+		soui4.log("nav to "+url);
+		iectrl.Navigate(url);
 		iectrl.Release();
 	}
 
