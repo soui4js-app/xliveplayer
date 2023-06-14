@@ -230,7 +230,7 @@ class RoomTvAdapter extends soui4.STvAdapter{
 	}
 
 	onGoOffcialUrl(e){
-		let pItem = soui4.toSWindow(e.Sender());
+		let pItem = soui4.toIWindow(e.Sender());
 		let itemApi = soui4.QiIItemPanel(pItem.GetIRoot());
 		let hItem = itemApi.GetItemIndex();
 		itemApi.Release();
@@ -242,7 +242,7 @@ class RoomTvAdapter extends soui4.STvAdapter{
 		}
 	}
 	onItemRClick(e){
-		let pItem = soui4.toSWindow(e.Sender());
+		let pItem = soui4.toIWindow(e.Sender());
 		let itemApi = soui4.QiIItemPanel(pItem);
 		let favorRoot = this.GetChildItem(soui4.STVI_ROOT,true);
 		let hItem = itemApi.GetItemIndex();
@@ -318,7 +318,7 @@ class RoomTvAdapter extends soui4.STvAdapter{
 	}
 	
 	onItemDbClick(e){
-		let pItem = soui4.toSWindow(e.Sender());
+		let pItem = soui4.toIWindow(e.Sender());
 		let pItemPanel = soui4.QiIItemPanel(pItem);
 		let hItem = pItemPanel.GetItemIndex();
 		pItemPanel.Release();
@@ -727,12 +727,12 @@ class CMainDlg extends soui4.JsHostDialog {
 		else if(evtId == soui4.EVT_CMD && e.Sender().GetName()=="chk_enable_subtitle")
 		{
 			let subtitles = this.FindIChildByName("scroll_subtitles");
-			let pChk = soui4.toSWindow(e.Sender());
+			let pChk = soui4.toIWindow(e.Sender());
 			subtitles.SetVisible(pChk.IsChecked(),true);
 		}else if(evtId == soui4.EVT_TC_DBCLICK && e.Sender().GetName()=="room_tree"){
 			//15004 == EVT_TC_DBCLICK
 			let tcDbClick = soui4.toEventTCDbClick(e);
-			let treeWnd = soui4.toSWindow(e.Sender());
+			let treeWnd = soui4.toIWindow(e.Sender());
 			let treeCtrl = soui4.QiITreeCtrl(treeWnd);
 			let iRoom = treeCtrl.GetItemData(tcDbClick.hItem);
 			if(iRoom!=-1){
