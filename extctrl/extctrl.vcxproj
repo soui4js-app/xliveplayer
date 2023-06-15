@@ -103,7 +103,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\..\soui4js\depends\soui4\lib;..\..\soui4js\depends\quickjs\bin;..\..\soui4js\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\soui4js\depends\soui4\lib\x86;..\..\soui4js\depends\quickjs\bin\x86;..\..\soui4js\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libquickjs.dll.a;qjsbind.lib;utilities4.lib;soui4.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
@@ -126,7 +126,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\..\soui4js\depends\soui4\lib;..\..\soui4js\depends\quickjs\bin;..\..\soui4js\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\soui4js\depends\soui4\lib\x86;..\..\soui4js\depends\quickjs\bin\x86;..\..\soui4js\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libquickjs.dll.a;qjsbind.lib;utilities4.lib;soui4.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
