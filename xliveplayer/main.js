@@ -585,7 +585,7 @@ class CMainDlg extends soui4.JsHostDialog {
         super(resId);
 		//init settings.
 		this.settings = {
-		"video_path":soui4.GetSpecialPath("video") + "\\sliveplayer",
+		"video_path":soui4.GetSpecialPath("video") + "\\xliveplayer",
 		"lang_en":true,
 		"volume":80,
 		"enable_vod_log":false
@@ -598,7 +598,8 @@ class CMainDlg extends soui4.JsHostDialog {
 		}catch(e){
 			soui4.log("read settings.json failed!");
 		}
-
+		//make sure path is valid
+		soui4.MkPath(this.settings.video_path,"");
 		//init lang
 		let theApp = soui4.GetApp();
 		let trModule = theApp.LoadTranslator(this.settings.lang_en?"lang:lang_en":"lang:lang_cn");
@@ -894,11 +895,13 @@ class CMainDlg extends soui4.JsHostDialog {
 			let recording = this.FindIChildByName("indicator_recording");
 			recording.SetAnimation(ani);
 			ani.Release();
+		}else{
+			console.log("record failed: code",errCode);
 		}
 	}
 	onBtnStartRecord(e){
 		let now = new Date();
-		this.vodPlayer.StartRecord(this.settings.video_path+"\\record_"+now.getFullYear()+"_"+now.getMonth()+"_"+now.getDay()+"_"+now.getMinutes()+"_"+now.getSeconds()+".mp4");
+		this.vodPlayer.StartRecord(this.settings.video_path+"\\record_"+now.getFullYear()+"_"+now.getMonth()+"_"+now.getDay()+"_"+now.getHours()+"_"+now.getMinutes()+"_"+now.getSeconds()+".mp4");
 	}
 	onRecordStop(recordName,errCode){
 		this.FindIChildByName("btn_record_start").SetVisible(true,false);
@@ -1137,7 +1140,7 @@ function main(inst,workDir,args)
 	let logMgr = soui4.CreateLogMgr();
 	if(logMgr != 0){
 		theApp.SetLogManager(logMgr);
-		logMgr.setLoggerName("sliveplayer");
+		logMgr.setLoggerName("xliveplayer");
 		logMgr.start();
 	}
 	//*
