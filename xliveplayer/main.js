@@ -901,7 +901,7 @@ class CMainDlg extends soui4.JsHostDialog {
 	}
 	onBtnStartRecord(e){
 		let now = new Date();
-		this.vodPlayer.StartRecord(this.settings.video_path+"\\record_"+now.getFullYear()+"_"+now.getMonth()+"_"+now.getDay()+"_"+now.getHours()+"_"+now.getMinutes()+"_"+now.getSeconds()+".mp4");
+		this.vodPlayer.StartRecord(this.settings.video_path+"\\record_"+now.getFullYear()+"_"+(now.getMonth()+1)+"_"+now.getDate()+"_"+now.getHours()+"_"+now.getMinutes()+"_"+now.getSeconds()+".mp4");
 	}
 	onRecordStop(recordName,errCode){
 		this.FindIChildByName("btn_record_start").SetVisible(true,false);
