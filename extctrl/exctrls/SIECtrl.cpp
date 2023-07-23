@@ -263,6 +263,6 @@ BOOL SIECtrl::Navigate(LPCWSTR strUrl)
 {
     m_strUrl = strUrl;
     m_pIE->put_Silent(VARIANT_TRUE); //
-    return S_OK == m_pIE->Navigate(bstr_t(strUrl), NULL, NULL, NULL, NULL);
+    return S_OK == m_pIE->Navigate(BSTR(strUrl), NULL, NULL, NULL, NULL);
 }
 SNSEND
