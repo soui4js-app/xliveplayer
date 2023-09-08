@@ -163,7 +163,7 @@ SScrollSubtitles::SScrollSubtitles():m_nSpeed(1), m_nLineHeight(30), m_xInterval
 				if (!m_mapTypeFont.Lookup(nType))
 				{
 					TypeFont tf;
-					tf.font = SFontPool::getSingleton().GetFont(xmlTypeFont.attribute(L"font").as_string(), GetScale());
+					tf.font = GETUIDEF->GetFont(xmlTypeFont.attribute(L"font").as_string(), GetScale());
 					tf.color = GETCOLOR(xmlTypeFont.attribute(L"color").as_string());
 					m_mapTypeFont[nType] = tf;
 				}
