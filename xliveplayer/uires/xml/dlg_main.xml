@@ -12,7 +12,7 @@ trCtx="dlg_main"
 		<img id="sysid_icon" skin="skin_logo"/>
 		<text id="sysid_title"/>
 		<text name="txt_title" size="0,-1" weight="1" colorText="@color/red"/>
-		<imgbtn size="24,24" name="btn_web" tip="Open Web Browser" skin="skin_btn_about"/>
+		<imgbtn size="24,24" name="btn_web" tip="Open Web Browser" skin="skin_btn_about" visible="0"/>
 		<imgbtn size="24,24" name="btn_about" tip="About" skin="skin_btn_about"/>
 		<imgbtn size="18,18" name="btn_settings" skin="skin_btn_config" tip="@string/settings"/>
 		<imgbtn id="sysid_min" skin="_skin.sys.btn.minimize" animate="1" />
