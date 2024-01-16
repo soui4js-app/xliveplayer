@@ -3,7 +3,8 @@ import * as extctrl from "extctrl.dll";
 import * as jsplayer from "jsvodplayer.dll";
 import * as os from "os";
 import * as std from "std";
-
+import * as utils from "utils.dll";
+	
 class FilterInputDialog extends soui4.JsHostDialog{
 	constructor(){
 		super("layout:dlg_input_filter");
@@ -505,6 +506,7 @@ class RoomTvAdapter extends soui4.STvAdapter{
 		let roomInfo = this.getRoomInfo(iRoom);
 		let url = "http://api.pyduck.com/live-api/get-url?live_platform="+roomInfo.platform+"&parameter="+roomInfo.id;
 		soui4.log("checkRoom,url="+url);
+		url = utils.UrlEncode(url);
 		this.httpCheckUrl = new soui4.HttpRequest(url,"get");
 		this.httpCheckUrl.cbHandler=this;
 		this.httpCheckUrl.onResp = this.onCheckUrlResp;
