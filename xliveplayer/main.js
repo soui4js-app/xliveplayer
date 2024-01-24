@@ -359,7 +359,7 @@ class RoomTvAdapter extends soui4.STvAdapter{
 
 	onRoomListResp(ctx,code,resp){
 		let xml = new soui4.SXmlDoc();
-		//let res = xml.LoadFile("d:\\roomlist.xml",116,0);//116=parse_default
+		//let res = xml.LoadFile("D:\\soui4js.com\\xliveplayer\\roomlist.xml",116,0);//116=parse_default
 		let res = xml.LoadString(resp,116);//116=parse_default
 		this.roomList = []; //prepare a room list.
 		if(res!=0){
@@ -454,18 +454,22 @@ class RoomTvAdapter extends soui4.STvAdapter{
 		let url = null;
 		if(roomInfo.url_path!="" && roomInfo.url_path!="data"){
 			//parse room result for the platform.
-			let path=roomInfo.url_path.split('/');
-			
-			for(let i=0;i<path.length;i++){
-				let ipath = path[i];
-				if(ipath.substr(0,1)=="."){
-				    let idx = parseInt(ipath.substr(1,ipath.length-1));
-					ret=ret[idx];
-				}else{
-					ret = ret[ipath];
-				}					
+			try{
+				let path=roomInfo.url_path.split('/');
+				for(let i=0;i<path.length;i++){
+					let ipath = path[i];
+					if(ipath.substr(0,1)=="."){
+						let idx = parseInt(ipath.substr(1,ipath.length-1));
+						ret=ret[idx];
+					}else{
+						ret = ret[ipath];
+					}					
+				}
+				url = ret;
+			}catch(e){
+				soui4.log("parse url failed:"+resp);
+				return null;
 			}
-			url = ret;
 		}else
 		{
 			url = ret.data;			
