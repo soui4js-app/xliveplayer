@@ -1,5 +1,6 @@
 #pragma once
 
+#include <atl.mini/SComCli.h>
 #include <control/SActiveX.h>
 #include <ExDisp.h>
 #include <ExDispid.h>

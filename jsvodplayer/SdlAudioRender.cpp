@@ -160,7 +160,7 @@ BOOL SdlAudioRender::init(const std::string& devName,
   wanted.samples = audioInfo->samples;
   wanted.callback = &SdlAudioRender::fill_audio;
   wanted.userdata = this;
-  m_audioRate = (uint32_t)std::ceil(((double)audioInfo->sampleRate)/audioInfo->samples);
+  m_audioRate = (uint32_t)ceil(((double)audioInfo->sampleRate)/audioInfo->samples);
 
   auto res =
     SDL_OpenAudioDevice(devName.empty() ? nullptr : devName.c_str(), false, &wanted, NULL, 0);

@@ -359,7 +359,7 @@ class RoomTvAdapter extends soui4.STvAdapter{
 
 	onRoomListResp(ctx,code,resp){
 		let xml = new soui4.SXmlDoc();
-		//let res = xml.LoadFile("D:\\soui4js.com\\xliveplayer\\roomlist.xml",116,0);//116=parse_default
+		//let res = xml.LoadFile("D:/soui4js.com/xliveplayer/roomlist.xml",116,0);//116=parse_default
 		let res = xml.LoadString(resp,116);//116=parse_default
 		this.roomList = []; //prepare a room list.
 		if(res!=0){
@@ -591,13 +591,13 @@ class CMainDlg extends soui4.JsHostDialog {
         super(resId);
 		//init settings.
 		this.settings = {
-		"video_path":soui4.GetSpecialPath("video") + "\\xliveplayer",
+		"video_path":soui4.GetSpecialPath("video") + "/xliveplayer",
 		"lang_en":true,
 		"volume":80,
 		"enable_vod_log":false
 		};
 		try{
-			let f = std.open(g_WordDir+"\\settings.json", "r");
+			let f = std.open(g_WordDir+"/settings.json", "r");
 			let settingStr = f.readAsString();
 			f.close();
 			this.settings = JSON.parse(settingStr);
@@ -907,7 +907,7 @@ class CMainDlg extends soui4.JsHostDialog {
 	}
 	onBtnStartRecord(e){
 		let now = new Date();
-		this.vodPlayer.StartRecord(this.settings.video_path+"\\record_"+now.getFullYear()+"_"+(now.getMonth()+1)+"_"+now.getDate()+"_"+now.getHours()+"_"+now.getMinutes()+"_"+now.getSeconds()+".mp4");
+		this.vodPlayer.StartRecord(this.settings.video_path+"/record_"+now.getFullYear()+"_"+(now.getMonth()+1)+"_"+now.getDate()+"_"+now.getHours()+"_"+now.getMinutes()+"_"+now.getSeconds()+".mp4");
 	}
 	onRecordStop(recordName,errCode){
 		this.FindIChildByName("btn_record_start").SetVisible(true,false);
@@ -1003,7 +1003,7 @@ class CMainDlg extends soui4.JsHostDialog {
 		this.DestroyWindow();
 
 		//save to file.
-		let f = std.open(g_WordDir+"\\settings.json", "w");
+		let f = std.open(g_WordDir+"/settings.json", "w");
 		let settingStr = JSON.stringify(this.settings);
 		f.puts(settingStr);
 		f.close();
@@ -1051,7 +1051,7 @@ class CMainDlg extends soui4.JsHostDialog {
 			url = filedlg.GetFilePath();
 			edit_url.SetWindowText(url);
 		}
-		let idx=url.lastIndexOf("\\");
+		let idx=url.lastIndexOf("/");
 		let title = url.substr(idx+1);
 		this.playUrl(url,title);
 	}
@@ -1151,11 +1151,11 @@ function main(inst,workDir,args)
 	}
 	//*
 	let resProvider = souiFac.CreateResProvider(1);
-	soui4.InitFileResProvider(resProvider,workDir + "\\uires");
+	soui4.InitFileResProvider(resProvider,workDir + "/uires");
 	//*/
 	/*
 	// show how to load resource from a zip file
-	let resProvider = soui4.CreateZipResProvider(theApp,workDir +"\\uires.zip","souizip");
+	let resProvider = soui4.CreateZipResProvider(theApp,workDir +"/uires.zip","souizip");
 	if(resProvider === 0){
 		soui4.log("load res from uires.zip failed");
 		return -1;
@@ -1166,7 +1166,7 @@ function main(inst,workDir,args)
 	resMgr.AddResProvider(resProvider,"uidef:xml_init");
 	resProvider.Release();
 	let hwnd = soui4.GetActiveWindow();
-	let hostWnd = new CMainDlg("xml\\dlg_main.xml");
+	let hostWnd = new CMainDlg("xml/dlg_main.xml");
 	hostWnd.Create(hwnd,0,0,0,0);
 	hostWnd.SendMessage(0x110,0,0);//send init dialog message.
 	hostWnd.ShowWindow(1); //1==SW_SHOWNORMAL

@@ -1,6 +1,11 @@
 #include "stdafx.h"
 #include "SScrollSubtitles.h"
 
+#define INITGUID
+#include <guiddef.h>
+DEFINE_GUID(IID_IScrollSubtitles, 0xB12EEA51, 0xA9E6, 0x45cf, 0x8f, 0x7a, 0x9D, 0xad, 0xa3, 0xa5, 0x90, 0x9f);
+DEFINE_GUID(IID_ICtrl, 0xBCB520F9, 0x3C81, 0x4AD7, 0xAD, 0xe2, 0xFE, 0x72, 0xBD, 0x76, 0x10, 0x32);
+
 SNSBEGIN
 
 SScrollSubtitles::SScrollSubtitles():m_nSpeed(1), m_nLineHeight(30), m_xInterval(10), m_iNextLine(0), m_yOffset(10),m_nCount(0)

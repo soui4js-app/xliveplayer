@@ -1,5 +1,6 @@
 #pragma once
 #include "exctrls/SScrollSubtitles.h"
+#include <sguid.h>
 
 using namespace SOUI;
 using namespace qjsbind;
@@ -9,7 +10,7 @@ T1* QueryICtrl(IWindow* pWnd) {
 	if (pWnd->IsClass(T2::GetClassName()))
 	{
 		IObjRef* pCtrl = NULL;
-		pWnd->QueryInterface(__uuidof(T1), &pCtrl);
+		pWnd->QueryInterface(TGuidOf<T1>(), &pCtrl);
 		if (!pCtrl) return NULL;
 		return (T1*)pCtrl;
 	}

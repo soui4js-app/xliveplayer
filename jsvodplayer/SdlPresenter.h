@@ -7,6 +7,8 @@
 #include <SDL.h>
 #include <map>
 #include <transvod-i.h>
+#include <atl.mini/SComCli.h>
+
 using namespace transvod_win;
 SNSBEGIN
 
@@ -67,7 +69,6 @@ public:
 	STDMETHOD_(void,OnHostDestroy)(THIS) OVERRIDE;
 	STDMETHOD_(void,OnHostResize)(THIS_ SIZE szHost) OVERRIDE;
 	STDMETHOD_(void,OnHostPresent)(THIS_ HDC hdc,IRenderTarget *pMemRT,LPCRECT rcDirty,BYTE byAlpha) OVERRIDE;
-	STDMETHOD_(void,OnHostAlpha)(THIS_ BYTE byAlpha) OVERRIDE;
 };
 
 SNSEND
