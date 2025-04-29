@@ -34,12 +34,6 @@ void SdlPresenter::_OnHeartBeat()
 	UpdateRender();
 }
 
-
-
-void SdlPresenter::OnHostAlpha(THIS_ BYTE byAlpha)
-{
-}
-
 void SdlPresenter::_OnHostCreate()
 {
 	m_sdlRenderer = SDL_CreateRenderer(m_sdlWnd, -1, 0);

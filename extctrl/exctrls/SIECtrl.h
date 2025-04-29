@@ -1,9 +1,11 @@
-#pragma once
+#ifndef _SIECTRL_H_
+#define _SIECTRL_H_
 
 #include <control/SActiveX.h>
 #include <ExDisp.h>
 #include <ExDispid.h>
 #include <interface/SCtrl-i.h>
+#include <atl.mini/SComCli.h>
 
 SNSBEGIN
 
@@ -285,3 +287,5 @@ protected:
 };
 
 SNSEND
+
+#endif//_SIECTRL_H_

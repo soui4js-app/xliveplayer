@@ -1,10 +1,13 @@
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "SDocHostUIHandler.h"
+
+#ifdef _WIN32
+
 #include <mshtml.h>
 #include <activex/SBStr.h>
 
-namespace SOUI
-{
+SNSBEGIN
+
 SDocHostUIHandler::SDocHostUIHandler(IScriptCaller *sc)
     : m_disContextMenu(FALSE)
     , m_disF5(FALSE)
@@ -111,7 +114,7 @@ HRESULT STDMETHODCALLTYPE SDocHostUIHandler::TranslateAccelerator(LPMSG lpMsg,
     return E_NOTIMPL;
 }
 
-HRESULT STDMETHODCALLTYPE SDocHostUIHandler::GetOptionKeyPath(__out LPOLESTR *pchKey, DWORD dw)
+HRESULT STDMETHODCALLTYPE SDocHostUIHandler::GetOptionKeyPath( LPOLESTR *pchKey, DWORD dw)
 {
     return E_NOTIMPL;
 }
@@ -130,8 +133,8 @@ HRESULT STDMETHODCALLTYPE SDocHostUIHandler::GetExternal(IDispatch **ppDispatch)
 }
 
 HRESULT STDMETHODCALLTYPE SDocHostUIHandler::TranslateUrl(DWORD dwTranslate,
-                                                          __in __nullterminated OLECHAR *pchURLIn,
-                                                          __out OLECHAR **ppchURLOut)
+                                                          OLECHAR *pchURLIn,
+                                                          OLECHAR **ppchURLOut)
 {
     return E_NOTIMPL;
 }
@@ -295,4 +298,6 @@ VARIANT ExecuteScript(IWebBrowser2 *pWebBrowser, const SStringW &fun, SArray<SSt
     return varRet;
 }
 
-} // namespace SOUI
+SNSEND
+
+#endif//_WIN32

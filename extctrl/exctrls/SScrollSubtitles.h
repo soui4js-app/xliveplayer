@@ -3,9 +3,12 @@
 
 SNSBEGIN
 
+DEFINE_SGUID2(IID_IScrollSubtitles, 0xB12EEA51, 0xA9E6, 0x45cf, 0x8F, 0xA7, 0x9D, 0xAD, 0xA3, 0xA5, 0x909, 0x9F);
+
 #undef INTERFACE
 #define INTERFACE IScrollSubtitles
-DECLARE_INTERFACE_IID_(IScrollSubtitles, ICtrl,"B12EEA51-A9E6-45cf-8FA7-9DADA3A5909F") {
+DECLARE_INTERFACE_(IScrollSubtitles, ICtrl) {
+	DECLARE_CLASS_SIID(IID_IScrollSubtitles)
 	/**
  * @brief 增加引用计数
  * @return 新引用计数

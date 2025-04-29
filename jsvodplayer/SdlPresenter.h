@@ -3,6 +3,7 @@
 #include <interface/staskloop-i.h>
 #include <helper/obj-ref-impl.hpp>
 #include <helper/SSharedPtr.hpp>
+#include <atl.mini/SComCli.h>
 #include <commgr2.h>
 #include <SDL.h>
 #include <map>
@@ -67,7 +68,6 @@ public:
 	STDMETHOD_(void,OnHostDestroy)(THIS) OVERRIDE;
 	STDMETHOD_(void,OnHostResize)(THIS_ SIZE szHost) OVERRIDE;
 	STDMETHOD_(void,OnHostPresent)(THIS_ HDC hdc,IRenderTarget *pMemRT,LPCRECT rcDirty,BYTE byAlpha) OVERRIDE;
-	STDMETHOD_(void,OnHostAlpha)(THIS_ BYTE byAlpha) OVERRIDE;
 };
 
 SNSEND
