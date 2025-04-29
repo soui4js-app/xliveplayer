@@ -1,17 +1,14 @@
-#ifndef _SDOCHOSTUIHANDLER_H_
-#define _SDOCHOSTUIHANDLER_H_
-
-#ifdef _WIN32
+#pragma once
 
 #include <atl.mini/SComHelper.h>
 #include <atl.mini/SComCli.h>
-#include <exdisp.h>
-#include <exdispid.h>
+#include <ExDisp.h>
+#include <ExDispid.h>
 #include <vector>
 #include <string>
 
-SNSBEGIN
-
+namespace SOUI
+{
 struct IScriptCaller
 {
     virtual ~IScriptCaller()
@@ -121,15 +118,15 @@ class SDocHostUIHandler : public SUnknownImpl<IDocHostUIHandler> {
 
     virtual STDMETHODIMP TranslateAccelerator(LPMSG lpMsg, const GUID *pguidCmdGroup, DWORD nCmdID);
 
-    virtual STDMETHODIMP GetOptionKeyPath( LPOLESTR *pchKey, DWORD dw);
+    virtual STDMETHODIMP GetOptionKeyPath(__out LPOLESTR *pchKey, DWORD dw);
 
     virtual STDMETHODIMP GetDropTarget(IDropTarget *pDropTarget, IDropTarget **ppDropTarget);
 
     virtual STDMETHODIMP GetExternal(IDispatch **ppDispatch);
 
     virtual STDMETHODIMP TranslateUrl(DWORD dwTranslate,
-                                      OLECHAR *pchURLIn,
-                                      OLECHAR **ppchURLOut);
+                                      __in __nullterminated OLECHAR *pchURLIn,
+                                      __out OLECHAR **ppchURLOut);
 
     virtual STDMETHODIMP FilterDataObject(IDataObject *pDO, IDataObject **ppDORet);
 
@@ -143,8 +140,4 @@ class SDocHostUIHandler : public SUnknownImpl<IDocHostUIHandler> {
 };
 
 VARIANT ExecuteScript(IWebBrowser2 *pWebBrowser, const SStringW &fun, SArray<SStringW> &params);
-
-SNSEND
-
-#endif//_WIN32
-#endif//_SDOCHOSTUIHANDLER_H_
+} // namespace SOUI

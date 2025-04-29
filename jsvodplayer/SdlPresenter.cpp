@@ -2,6 +2,7 @@
 #include "SdlPresenter.h"
 #include <helper/SFunctor.hpp>
 #include <Mmsystem.h>
+#include <atl.mini/SComCli.h>
 #pragma comment(lib,"Winmm.lib")
 #define  kLogTag "SdlPresenter"
 

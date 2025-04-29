@@ -1,6 +1,7 @@
 #ifndef _SIECTRL_H_
 #define _SIECTRL_H_
 
+#include <atl.mini/SComCli.h>
 #include <control/SActiveX.h>
 #include <ExDisp.h>
 #include <ExDispid.h>

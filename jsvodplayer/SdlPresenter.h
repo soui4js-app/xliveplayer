@@ -8,6 +8,8 @@
 #include <SDL.h>
 #include <map>
 #include <transvod-i.h>
+#include <atl.mini/SComCli.h>
+
 using namespace transvod_win;
 SNSBEGIN
 
