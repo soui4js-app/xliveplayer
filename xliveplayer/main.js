@@ -119,6 +119,7 @@ class RoomTvAdapter extends soui4.STvAdapter{
 		this.favorRoot={platform:null,id:-1,desc:"我的收藏",url_path:null,item:0,"url":null,hot:1},
 		this.onGetView = this.getView;
 		this.isRefeshing = false;
+		this.live_api = "http://soui4js.com:8080/live-api/get-url";
 		/*
 		this.favorList =[
 			{"platform":"YY","id":54880976,"desc":"yy/991","url_path":"data","item":0,"url":null},
@@ -363,7 +364,13 @@ class RoomTvAdapter extends soui4.STvAdapter{
 		let res = xml.LoadString(resp,116);//116=parse_default
 		this.roomList = []; //prepare a room list.
 		if(res!=0){
-			let xmlPlatform = xml.Root().FirstChild().FirstChild();
+			let xmlRoot = xml.Root().FirstChild();
+			let liveApi = xmlRoot.Attribute("live_api",false);
+			if(liveApi!=0){
+				this.live_api = liveApi.Value();
+			}
+			console.log("live_api:"+this.live_api);
+			let xmlPlatform = xmlRoot.FirstChild();
 			let iRoom=0;
 			while(!xmlPlatform.IsEmpty()){
 				let platformName = xmlPlatform.Attribute("name",false).Value();
@@ -508,7 +515,7 @@ class RoomTvAdapter extends soui4.STvAdapter{
 
 	checkRoom(iRoom,bFetchAll){
 		let roomInfo = this.getRoomInfo(iRoom);
-		let url = "http://api.pyduck.com/live-api/get-url?live_platform="+roomInfo.platform+"&parameter="+roomInfo.id;
+		let url =  this.live_api + "?live_platform="+roomInfo.platform+"&parameter="+roomInfo.id;
 		soui4.log("checkRoom,url="+url);
 		url = utils.UrlEncode(url);
 		this.httpCheckUrl = new soui4.HttpRequest(url,"get");
