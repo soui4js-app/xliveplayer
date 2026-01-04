@@ -84,7 +84,7 @@ class SScrollSubtitles : public TWindowProxy<IScrollSubtitles>, public ITimeline
 		};
 
 		struct TypeFont {
-			SAutoRefPtr<IFont> font;
+			SAutoRefPtr<IFontS> font;
 			COLORREF		   color;
 		};
 
